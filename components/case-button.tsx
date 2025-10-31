@@ -11,9 +11,9 @@ const CaseButton=({
 }) =>{
     const isActive = activeCase === type;
     const baseClass =
-        "px-4 py-2 rounded transition-colors duration-200 text-white cursor-pointer";
-    const activeClass = "bg-gray-600";
-    const inactiveClass = "bg-gray-400 hover:bg-gray-600";
+        "px-4 py-3 rounded transition-colors font-semibold duration-200 text-white cursor-pointer";
+    const activeClass = "bg-indigo-600";
+    const inactiveClass = "bg-indigo-400 hover:bg-indigo-600";
 
     return (
         <button
