@@ -11,6 +11,9 @@ const Home = () => {
   const [text, setText] = useState("");
   const [activeCase, setActiveCase] = useState("");
 
+  const charCount = text.replace(/\n/g, "").length;
+  const wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+  const lineCount = text === "" ? 0 : text.split(/\n/).length;
 
   const toSentenceCase = (str: string) =>
     str.length ? str[0].toUpperCase() + str.slice(1).toLowerCase() : str;
@@ -58,8 +61,21 @@ const Home = () => {
       <div className="max-w-[1200px] w-full mx-auto p-8">
         <div className="flex flex-col gap-4">
           <div className="grid grid-cols-12 gap-10">
-            <div className="col-span-9">
-
+            <div className="col-span-9 flex gap-5">
+              <div className="flex gap-2 items-center">
+                <p className="text-gray-500 font-medium text-lg">Characters:</p>
+                <p className="text-indigo-500 font-semibold text-lg">{charCount}</p>
+              </div>
+              <div className="w-[2px] h-full bg-gray-200" />
+              <div className="flex gap-2 items-center">
+                <p className="text-gray-500 font-medium text-lg"> Words:</p>
+                <p className="text-indigo-500 font-semibold text-lg">{wordCount}</p>
+              </div>
+              <div className="w-[2px] h-full bg-gray-200" />
+              <div className="flex gap-2 items-center">
+                <p className="text-gray-500 font-medium text-lg">Lines/CR:</p>
+                <p className="text-indigo-500 font-semibold text-lg">{lineCount}</p>
+              </div>
             </div>
             <div className="col-span-3">
               <p className="text-indigo-500 font-bold uppercase">Change my text to...</p>
