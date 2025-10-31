@@ -73,7 +73,7 @@ const Home = () => {
               </div>
               <div className="w-[2px] h-full bg-gray-200" />
               <div className="flex gap-2 items-center">
-                <p className="text-gray-500 font-medium text-lg">Lines/CR:</p>
+                <p className="text-gray-500 font-medium text-lg">Lines:</p>
                 <p className="text-indigo-500 font-semibold text-lg">{lineCount}</p>
               </div>
             </div>
